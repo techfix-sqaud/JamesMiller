@@ -5,6 +5,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sport/login_register/register.dart';
 
+import '../home/home.dart';
+
 class Login extends StatefulWidget {
 
   @override
@@ -187,7 +189,12 @@ class _Login extends State<Login> {
 
                         ),
                         onPressed: () async {
-                          print('Hello world');
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute<void>(
+                              builder: (BuildContext context) => Home(),
+                            ),
+                          );
                         },
                       ),
                     ),
@@ -232,7 +239,9 @@ class _Login extends State<Login> {
                     ),
                     Center(
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+
+                        },
                         child: Icon(FontAwesomeIcons.facebook, color: Colors.blue),
                         style: ElevatedButton.styleFrom(
                           shape: CircleBorder(),
